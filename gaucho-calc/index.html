@@ -1,1 +1,240 @@
 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaúcho Calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="splash">
+        <img src="img/logo-vitta.png" alt="Vitta">
+        <h1>Gaúcho Calc - V1.5</h1>
+        <p>Simulador Imobiliário</p>
+    </div>
+
+      
+
+<div class="container">
+
+    <div class="topo">
+        <div id="menuBotao">&#9776;</div>
+        <h1>Gaúcho Calc</h1>
+        <span class="versao">V1.5</span>
+    </div>
+
+    <div id="menuSuspenso">
+        <div class="itemMenu">Enviar WhatsApp</div>
+        <div class="itemMenu">Salvar Simulação</div>
+        <div class="itemMenu">Empreendimentos</div>
+        <div class="itemMenu">Configurações</div>
+        <div class="itemMenu">Sobre</div>
+    </div>    
+
+    <div class="linha">
+
+       <div class="campo">
+          <label>Valor Avaliação</label>
+          <input type="text" id="avaliacao" class="moeda" inputmode="numeric">
+        </div>
+
+        <div class="campo">
+            <label>Valor Venda</label>
+            <input type="text" id="venda" class="moeda" inputmode="numeric">
+        </div>
+
+    </div>
+
+<div class="linha">
+
+    <div class="linha">
+
+    <div class="campo">
+        <label>Valor Financiado</label>
+        <input type="text" id="financiado" readonly>
+    </div>
+
+    <div class="campo">
+        <label>Valor Entrada</label>
+        <input type="text" id="entrada" readonly>
+    </div>
+
+</div>
+
+    
+
+</div>
+
+
+    <div class="linha">
+
+        <div class="campo">
+            <label>FGTS</label>
+            <input type="text" id="fgts" class="moeda" inputmode="numeric">
+        </div>
+
+        <div class="campo">
+            <label>Valor no Ato</label>
+            <input type="text" id="ato" class="moeda" inputmode="numeric">
+        </div>
+
+    </div>
+
+    <div class="linha">
+
+        <div class="campo">
+            <label>Qtde. Aportes</label>
+            <input type="number" id="qtdAportes">
+        </div>
+
+        <div class="campo">
+            <label>Valor Aporte</label>
+            <input type="text" id="valorAporte" class="moeda" inputmode="numeric">
+        </div>
+
+    </div>
+
+    <div class="linha">
+
+        <div class="campo">
+            <label>Qtde. Parcelas</label>
+            <input type="number" id="parcelas">
+        </div>
+
+        <div class="campo">
+
+            <label>Pós-Chaves</label>
+
+            <div class="opcoes">
+
+                <label>
+                    <input type="radio"
+                           name="posChaves"
+                           value="nao"
+                           checked>
+                    Não
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="posChaves"
+                           value="sim">
+                    Sim
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ESTES CAMPOS FICARÃO ESCONDIDOS POR ENQUANTO -->
+
+    <div id="areaPosChaves" style="display:none;">
+
+        <div class="linha">
+
+            <div class="campo">
+                <label>% Pós-Chaves</label>
+                <input type="number" id="percentualPos">
+            </div>
+
+            <div class="campo">
+                <label>Valor Pós-Chaves</label>
+                <input type="text" id="valorPos" readonly>
+            </div>
+
+        </div>
+
+        <div class="linha">
+
+            <div class="campo">
+                <label>Qtde. Parc. Pós</label>
+                <input type="number" id="parcelasPos">
+            </div>
+
+            <div class="campo">
+                <label>Valor Parcela Pós</label>
+                <input type="text" id="valorParcelaPos" readonly>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="resultado-box">
+
+        <h2>VALOR DA PARCELA</h2>
+
+        <p id="resultado">
+            R$ 0,00
+        </p>
+
+    </div>
+
+<div class="resultado-box">
+
+    <h2>FINANCIAMENTO</h2>
+
+</div>
+
+<div class="linha">
+
+    <div class="campo">
+        <label>Prazo Financ.</label>
+        <input type="number" id="prazoFin">
+    </div>
+
+    <div class="campo">
+        <label>Juros (% a.a.)</label>
+        <input type="number" id="jurosAno" step="0.01">
+    </div>
+
+</div>
+
+<div class="linha">
+
+    <div class="campo">
+        <label>Parcela Financ.</label>
+        <input type="text" id="parcelaFin" readonly>
+    </div>
+
+    <div class="campo">
+        <label>Renda Mínima</label>
+        <input type="text" id="rendaMinima" readonly>
+    </div>
+
+</div>
+
+<div class="linha">
+
+    <div class="campo">
+        <label>Status Simulação</label>
+        <input type="text" id="statusSimulacao" readonly>
+    </div>
+
+    <div class="campo">
+        <label>Renda Informada</label>
+        <input type="text"
+               id="rendaInformada"
+               class="moeda"
+               inputmode="numeric">
+    </div>
+
+</div>
+
+    <button id="limpar">
+        Limpar
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
