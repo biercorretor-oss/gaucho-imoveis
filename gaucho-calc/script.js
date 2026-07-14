@@ -324,11 +324,16 @@ function recalcularPorRendaInformada() {
 
 document.getElementById("rendaInformada").addEventListener("input", function () {
 
+    formatarMoeda(this);
+
     if (this.value.trim() == "") {
 
         financiamentoCalculado = 0;
-
         calcular();
+
+    } else {
+
+        recalcularPorRendaInformada();
 
     }
 
@@ -338,7 +343,6 @@ document.getElementById("rendaInformada").addEventListener("blur", function () {
 
     completarCentavos(this);
 
-    recalcularPorRendaInformada();
 
 });
 
