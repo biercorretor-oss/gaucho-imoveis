@@ -121,7 +121,24 @@ document.getElementById("resultado").innerHTML =
 }
 
 document.querySelectorAll('input:not([type="radio"])').forEach(campo => {
-    campo.addEventListener("input", calcular);
+
+    campo.addEventListener("input", function () {
+
+        if (
+            (this.id === "prazoFin" || this.id === "jurosAno") &&
+            lerValor("rendaInformada") > 0
+        ) {
+
+            recalcularPorRendaInformada();
+
+        } else {
+
+            calcular();
+
+        }
+
+    });
+
 });
 
 document.getElementById("limpar").addEventListener("click", function(){
@@ -375,3 +392,4 @@ function atualizarCalculoCompleto(){
     }
 
 }
+
