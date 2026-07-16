@@ -365,3 +365,13 @@ function atualizarStatus(){
     }
 
 }
+
+function atualizarCalculoCompleto(){
+
+    if (lerValor("rendaInformada") > 0){
+        recalcularPorRendaInformada();
+    }else{
+        calcular();
+    }
+
+}
